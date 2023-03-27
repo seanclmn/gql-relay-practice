@@ -1,0 +1,5 @@
+# ignore
+
+app/node_modules
+app/.expo
+
