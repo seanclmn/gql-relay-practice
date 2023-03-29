@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<c1ea72e6a59365475e5018fd3df81d13>>
+ * @generated SignedSource<<ce8434d36761630704e65f4355ea13e3>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -16,12 +16,6 @@ export type ListQuery$data = {
       readonly characterConnection: {
         readonly characters: ReadonlyArray<{
           readonly name: string | null;
-          readonly species: {
-            readonly classification: string | null;
-            readonly homeworld: {
-              readonly name: string | null;
-            } | null;
-          } | null;
         } | null> | null;
       } | null;
       readonly created: string | null;
@@ -103,13 +97,6 @@ v8 = {
   "kind": "ScalarField",
   "name": "name",
   "storageKey": null
-},
-v9 = {
-  "alias": null,
-  "args": null,
-  "kind": "ScalarField",
-  "name": "classification",
-  "storageKey": null
 };
 return {
   "fragment": {
@@ -158,31 +145,7 @@ return {
                     "name": "characters",
                     "plural": true,
                     "selections": [
-                      (v8/*: any*/),
-                      {
-                        "alias": null,
-                        "args": null,
-                        "concreteType": "Species",
-                        "kind": "LinkedField",
-                        "name": "species",
-                        "plural": false,
-                        "selections": [
-                          (v9/*: any*/),
-                          {
-                            "alias": null,
-                            "args": null,
-                            "concreteType": "Planet",
-                            "kind": "LinkedField",
-                            "name": "homeworld",
-                            "plural": false,
-                            "selections": [
-                              (v8/*: any*/)
-                            ],
-                            "storageKey": null
-                          }
-                        ],
-                        "storageKey": null
-                      }
+                      (v8/*: any*/)
                     ],
                     "storageKey": null
                   }
@@ -246,32 +209,6 @@ return {
                     "plural": true,
                     "selections": [
                       (v8/*: any*/),
-                      {
-                        "alias": null,
-                        "args": null,
-                        "concreteType": "Species",
-                        "kind": "LinkedField",
-                        "name": "species",
-                        "plural": false,
-                        "selections": [
-                          (v9/*: any*/),
-                          {
-                            "alias": null,
-                            "args": null,
-                            "concreteType": "Planet",
-                            "kind": "LinkedField",
-                            "name": "homeworld",
-                            "plural": false,
-                            "selections": [
-                              (v8/*: any*/),
-                              (v2/*: any*/)
-                            ],
-                            "storageKey": null
-                          },
-                          (v2/*: any*/)
-                        ],
-                        "storageKey": null
-                      },
                       (v2/*: any*/)
                     ],
                     "storageKey": null
@@ -288,16 +225,16 @@ return {
     ]
   },
   "params": {
-    "cacheID": "3aba242e6da5043c85b33b6c94087aac",
+    "cacheID": "a72a9c3ed434cb7520e826bcb6c0a188",
     "id": null,
     "metadata": {},
     "name": "ListQuery",
     "operationKind": "query",
-    "text": "query ListQuery {\n  allFilms {\n    films {\n      episodeID\n      title\n      id\n      releaseDate\n      director\n      created\n      producers\n      edited\n      characterConnection {\n        characters {\n          name\n          species {\n            classification\n            homeworld {\n              name\n              id\n            }\n            id\n          }\n          id\n        }\n      }\n    }\n  }\n}\n"
+    "text": "query ListQuery {\n  allFilms {\n    films {\n      episodeID\n      title\n      id\n      releaseDate\n      director\n      created\n      producers\n      edited\n      characterConnection {\n        characters {\n          name\n          id\n        }\n      }\n    }\n  }\n}\n"
   }
 };
 })();
 
-(node as any).hash = "77940481c7d42fb61be7145de4679385";
+(node as any).hash = "79bb09be9602827e7484ea96a203234b";
 
 export default node;
